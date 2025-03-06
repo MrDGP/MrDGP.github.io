@@ -8,47 +8,71 @@
 </head>
 <body>
     <nav>
-        <button onclick="showSection('homepage')">Homepage</button>
-        <button onclick="showSection('personal-info')">Personal Info</button>
-        <button onclick="showSection('personal-schedule')">Personal Schedule</button>
-        <button onclick="showSection('cv')">CV</button>
+        <button class="nav-btn" onclick="showSection('homepage')">Homepage</button>
+        <button class="nav-btn" onclick="showSection('personal-info')">Personal Info</button>
+        <button class="nav-btn" onclick="showSection('personal-schedule')">Personal Schedule</button>
+        <button class="nav-btn" onclick="showSection('cv')">CV</button>
     </nav>
     
     <main>
         <section id="homepage" class="content">
+            <div class="profile-container">
+                <div class="profile-picture"></div>
+            </div>
             <h2>Wi-Fi 7 and 6G: The Future of Connectivity</h2>
             <p><strong>Wi-Fi 7</strong> is the latest advancement in wireless technology, providing speeds up to 46 Gbps, ultra-low latency, and enhanced network efficiency.</p>
             <img src="wifi7.jpg" alt="Wi-Fi 7">
+            <img src="wifi7_2.jpg" alt="Wi-Fi 7 Advantages">
             <p><strong>6G</strong> is the upcoming mobile network technology expected to revolutionize connectivity with speeds reaching 1 Tbps.</p>
             <img src="6g.jpg" alt="6G">
+            <img src="6g_2.jpg" alt="6G Future Applications">
         </section>
         
         <section id="personal-info" class="content hidden">
-            <div class="info-box">
+            <div class="info-box sticker">
                 <h3>Hobbies</h3>
-                <p>Here you can add your hobbies.</p>
+                <ul>
+                    <li>📖 Reading fantasy books</li>
+                    <li>🔧 Embedded systems development</li>
+                    <li>🖥️ Building personal computers</li>
+                </ul>
             </div>
-            <div class="info-box">
+            <div class="info-box sticker">
                 <h3>Personal Information</h3>
-                <p>Here you can add your personal details.</p>
+                <p><strong>Name:</strong> Gutierrez Preza Diego</p>
+                <p><strong>Age:</strong> 21 years</p>
+                <p><strong>Location:</strong> Mexico City, Mexico</p>
             </div>
-            <div class="info-box">
+            <div class="info-box sticker">
                 <h3>Who Am I</h3>
-                <p>Here you can introduce yourself.</p>
+                <p>.</p>
             </div>
-            <div class="info-box">
+            <div class="info-box sticker">
                 <h3>Education</h3>
-                <p>Here you can list your education details.</p>
+                <p><strong>National Autonomous University of Mexico (UNAM)</strong></p>
+                <p><strong>Faculty of Engineering</strong></p>
+                <p><strong>Career:</strong> Computer Engineering</p>
+                <p><strong>8th Semester</strong></p>
             </div>
         </section>
         
         <section id="personal-schedule" class="content hidden">
             <p>Here will be my personal schedule.</p>
+            <div class="schedule-container">
+                <img src="schedule.jpg" alt="Personal Schedule">
+            </div>
         </section>
         
         <section id="cv" class="content hidden">
-            <iframe src="cv.pdf" width="100%" height="500px"></iframe>
-            <a href="cv.pdf" download class="download-btn">Download CV</a>
+            <p>Preview and download my CV in your preferred language:</p>
+            <div class="cv-container">
+                <iframe src="cv_english.pdf" width="100%" height="300px"></iframe>
+                <a href="cv_english.pdf" download class="download-btn">Download CV (English)</a>
+            </div>
+            <div class="cv-container">
+                <iframe src="cv_spanish.pdf" width="100%" height="300px"></iframe>
+                <a href="cv_spanish.pdf" download class="download-btn">Download CV (Español)</a>
+            </div>
         </section>
     </main>
     
@@ -68,19 +92,24 @@
             margin: 0;
             padding: 0;
             text-align: center;
+            color: #333;
         }
         nav {
-            background: #007BFF;
+            background: #6a0dad;
             padding: 15px;
         }
-        nav button {
-            background: white;
+        .nav-btn {
+            background: #9b30ff;
+            color: white;
             border: none;
             padding: 10px 20px;
             margin: 5px;
             cursor: pointer;
             font-size: 16px;
             border-radius: 5px;
+        }
+        .nav-btn:hover {
+            background: #8a2be2;
         }
         .content {
             background: white;
@@ -89,25 +118,41 @@
             width: 80%;
             max-width: 800px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
         .hidden {
             display: none;
         }
         .info-box {
-            background: #e3f2fd;
+            background: #e0c3fc;
             padding: 15px;
             margin: 10px;
             border-radius: 8px;
+            position: relative;
         }
         .download-btn {
             display: inline-block;
-            background: #007BFF;
+            background: #6a0dad;
             color: white;
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
-            margin-top: 10px;
+            margin: 10px;
+        }
+        .download-btn:hover {
+            background: #8a2be2;
+        }
+        .cv-container {
+            margin: 20px 0;
+        }
+        .schedule-container {
+            margin-top: 20px;
+        }
+        .schedule-container img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
     </style>
 </body>
