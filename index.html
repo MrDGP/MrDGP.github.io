@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <button onclick="showSection('homepage')">Homepage</button>
+        <button onclick="showSection('personal-info')">Personal Info</button>
+        <button onclick="showSection('personal-schedule')">Personal Schedule</button>
+        <button onclick="showSection('cv')">CV</button>
+    </nav>
+    
+    <main>
+        <section id="homepage" class="content">
+            <h2>Wi-Fi 7 and 6G: The Future of Connectivity</h2>
+            <p><strong>Wi-Fi 7</strong> is the latest advancement in wireless technology, providing speeds up to 46 Gbps, ultra-low latency, and enhanced network efficiency.</p>
+            <img src="wifi7.jpg" alt="Wi-Fi 7">
+            <p><strong>6G</strong> is the upcoming mobile network technology expected to revolutionize connectivity with speeds reaching 1 Tbps.</p>
+            <img src="6g.jpg" alt="6G">
+        </section>
+        
+        <section id="personal-info" class="content hidden">
+            <div class="info-box">
+                <h3>Hobbies</h3>
+                <p>Here you can add your hobbies.</p>
+            </div>
+            <div class="info-box">
+                <h3>Personal Information</h3>
+                <p>Here you can add your personal details.</p>
+            </div>
+            <div class="info-box">
+                <h3>Who Am I</h3>
+                <p>Here you can introduce yourself.</p>
+            </div>
+            <div class="info-box">
+                <h3>Education</h3>
+                <p>Here you can list your education details.</p>
+            </div>
+        </section>
+        
+        <section id="personal-schedule" class="content hidden">
+            <p>Here will be my personal schedule.</p>
+        </section>
+        
+        <section id="cv" class="content hidden">
+            <iframe src="cv.pdf" width="100%" height="500px"></iframe>
+            <a href="cv.pdf" download class="download-btn">Download CV</a>
+        </section>
+    </main>
+    
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.content').forEach(section => {
+                section.classList.add('hidden');
+            });
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav {
+            background: #007BFF;
+            padding: 15px;
+        }
+        nav button {
+            background: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .content {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .hidden {
+            display: none;
+        }
+        .info-box {
+            background: #e3f2fd;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 8px;
+        }
+        .download-btn {
+            display: inline-block;
+            background: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</body>
+</html>
