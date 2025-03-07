@@ -5,6 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Website</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #333;
+        }
+        nav {
+            background: #6a0dad;
+            padding: 15px;
+        }
+        .nav-btn {
+            background: #8a2be2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .nav-btn:hover {
+            background: #7a1dbf;
+        }
+        .content {
+            display: none;
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: left;
+        }
+        .content:not(.hidden) {
+            display: block;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        ul {
+            list-style-position: inside;
+            padding-left: 20px;
+        }
+
+        .image-container {
+        text-align: center;
+        }
+    </style>
+
 </head>
 <body>
     <nav>
@@ -17,15 +82,75 @@
     <main>
         <section id="homepage" class="content">
             <div class="profile-container">
-                <div class="profile-picture"></div>
+                <div class="profile-picture">
+                    <img src="images/foto.jpg" alt="Your Photo">
+                </div>
             </div>
-            <h2>Wi-Fi 7 and 6G: The Future of Connectivity</h2>
-            <p><strong>Wi-Fi 7</strong> is the latest advancement in wireless technology, providing speeds up to 46 Gbps, ultra-low latency, and enhanced network efficiency.</p>
-            <img src="wifi7.jpg" alt="Wi-Fi 7">
-            <img src="wifi7_2.jpg" alt="Wi-Fi 7 Advantages">
-            <p><strong>6G</strong> is the upcoming mobile network technology expected to revolutionize connectivity with speeds reaching 1 Tbps.</p>
-            <img src="6g.jpg" alt="6G">
-            <img src="6g_2.jpg" alt="6G Future Applications">
+            <h2 class="homepage-title">Wi-Fi 7 and 6G: The Future of Connectivity</h2>
+            <p class="homepage-text"><strong>Wi-Fi 7</strong> is the latest advancement in wireless technology, 
+            providing speeds up to <strong>46 Gbps</strong>, ultra-low latency, and enhanced network efficiency.</p>
+
+
+            <h2 class="homepage-title">Wi-Fi 7 and 6G: The Future of Connectivity</h2>
+            <h3>What is Wi-Fi 7?</h3>
+            <p><strong>Wi-Fi 7</strong> is the latest wireless networking standard (IEEE 802.11be) designed to enhance speed, latency, and efficiency compared to Wi-Fi 6 and 6E.</p>
+            <ul>
+                <li><strong>Extreme Speed:</strong> Up to 46 Gbps, nearly 4.8 times faster than Wi-Fi 6.</li>
+                <li><strong>320 MHz Channels:</strong> Double the bandwidth of Wi-Fi 6E.</li>
+                <li><strong>Multi-Link Operation (MLO):</strong> Simultaneous connection across 2.4 GHz, 5 GHz, and 6 GHz.</li>
+                <li><strong>4096-QAM:</strong> Higher data density per transmission.</li>
+                <li><strong>Reduced Latency:</strong> Optimized for cloud gaming, VR, and real-time applications.</li>
+            </ul>
+            <div class="image-container">
+                <img src="images/wifi7_keyfeatures.jpeg" alt="Wi-Fi 7" class="homepage-image">
+            </div>
+            <h3>What is 6G?</h3>
+            <p><strong>6G</strong> is the next-generation mobile network, expected between 2030 and 2035. It aims to revolutionize connectivity with speeds reaching <strong>1 Tbps</strong>
+            6G technology is poised to be the next major leap in wireless communication, building upon the foundations of 5G while offering 
+            unprecedented speeds, minimal latency, and widespread connectivity. <P> 5G is still in its deployment phase worldwide, major 
+            technology companies, research institutions, and governments are already investing in 6G research and development. <P>Experts predict 
+            that 6G networks will not only revolutionize mobile communication but also enable advanced applications such as real-time 
+            holographic communication, seamless artificial intelligence (AI) integration, and the expansion of the Internet of Everything (IoE).
+            By utilizing higher frequency bands and AI-driven network optimizations, 6G is expected to bring an unparalleled digital 
+            transformation across industries. <P>This investigation explores the anticipated features, benefits, challenges, and comparisons 
+            with previous wireless communication standards.</p>
+            
+            <ul>
+                <li><strong>Speeds up to 1 Tbps:</strong> 100 times faster than 5G.</li>
+                <li><strong>Ultra-low latency:</strong> Less than 1 ms.</li>
+                <li><strong>AI-driven networks:</strong> Smart network optimization.</li>
+                <li><strong>Quantum and holographic communication:</strong> Ultra-secure data transmission.</li>
+            </ul>
+            <div class="image-container">
+                <img src="images/6g.jpg" alt="Wi-Fi 7" class="homepage-image">
+            </div>
+            
+            <h3>Comparison Table: Wi-Fi 7 vs. 6G</h3>
+            <table>
+                <tr>
+                    <th>Feature</th>
+                    <th>Wi-Fi 7</th>
+                    <th>6G</th>
+                </tr>
+                <tr>
+                    <td><strong>Speed</strong></td>
+                    <td>Up to 46 Gbps</td>
+                    <td>Up to 1 Tbps</td>
+                </tr>
+                <tr>
+                    <td><strong>Latency</strong></td>
+                    <td>Less than 2 ms</td>
+                    <td>Less than 1 ms</td>
+                </tr>
+                <tr>
+                    <td><strong>Frequencies</strong></td>
+                    <td>2.4 GHz, 5 GHz, 6 GHz</td>
+                    <td>THz and sub-THz spectrum</td>
+                </tr>
+            </table>
+            <p><strong>Conclusion:</strong> Wi-Fi 7 enhances wireless networking, while 6G will revolutionize telecommunications with AI-driven hyperconnectivity.</p>
+
+            
         </section>
         
         <section id="personal-info" class="content hidden">
@@ -35,6 +160,8 @@
                     <li>📖 Reading fantasy books</li>
                     <li>🔧 Embedded systems development</li>
                     <li>🖥️ Building personal computers</li>
+                    <li>📈 data science and data analysis</li>
+                    <li>🤖 IA and machine learning</li>
                 </ul>
             </div>
             <div class="info-box sticker">
@@ -45,33 +172,42 @@
             </div>
             <div class="info-box sticker">
                 <h3>Who Am I</h3>
-                <p>.</p>
+                <p>My name is Diego Gutierrez Preza, I am a student of computer engineering, 
+                    currently in my 8th semester. 
+                    I am passionate about software and hardware,
+                    especially about building computers. I am a responsible 
+                    and persevering person who always works to achieve his goals.</p> <P> My favourite thing to do are:
+                <ul>
+                    <li>📖 Read</li>
+                    <li>🎮 Video games</li>
+                    <li>♟️ Chess</li>
+
+                </ul>
             </div>
             <div class="info-box sticker">
                 <h3>Education</h3>
-                <p><strong>National Autonomous University of Mexico (UNAM)</strong></p>
-                <p><strong>Faculty of Engineering</strong></p>
+                <p>National Autonomous University of Mexico (UNAM)</p>
+                <p>Faculty of Engineering</p>
                 <p><strong>Career:</strong> Computer Engineering</p>
-                <p><strong>8th Semester</strong></p>
+                <p>8th Semester</p>
             </div>
         </section>
         
         <section id="personal-schedule" class="content hidden">
-            <p>Here will be my personal schedule.</p>
             <div class="schedule-container">
-                <img src="schedule.jpg" alt="Personal Schedule">
+                <img src="images/schedule.png" alt="Personal Schedule">
             </div>
         </section>
         
         <section id="cv" class="content hidden">
             <p>Preview and download my CV in your preferred language:</p>
             <div class="cv-container">
-                <iframe src="cv_english.pdf" width="100%" height="300px"></iframe>
-                <a href="cv_english.pdf" download class="download-btn">Download CV (English)</a>
+                <iframe src="CV/CV_ingles.pdf" width="100%" height="300px"></iframe>
+                <button onclick="downloadCV('cv_english.pdf')" class="download-btn">Download CV (English)</button>
             </div>
             <div class="cv-container">
-                <iframe src="cv_spanish.pdf" width="100%" height="300px"></iframe>
-                <a href="cv_spanish.pdf" download class="download-btn">Download CV (Español)</a>
+                <iframe src="CV/CV_español.pdf" width="100%" height="300px"></iframe>
+                <button onclick="downloadCV('cv_spanish.pdf')" class="download-btn">Download CV (Español)</button>
             </div>
         </section>
     </main>
@@ -83,11 +219,15 @@
             });
             document.getElementById(sectionId).classList.remove('hidden');
         }
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            showSection('homepage');
+        });
     </script>
     
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Montserrat', sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
@@ -99,7 +239,7 @@
             padding: 15px;
         }
         .nav-btn {
-            background: #9b30ff;
+            background: #8a2be2;
             color: white;
             border: none;
             padding: 10px 20px;
@@ -109,9 +249,10 @@
             border-radius: 5px;
         }
         .nav-btn:hover {
-            background: #8a2be2;
+            background: #7a1dbf;
         }
         .content {
+            display: none;
             background: white;
             padding: 20px;
             margin: 20px auto;
@@ -120,39 +261,47 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
-        .hidden {
-            display: none;
+        .content:not(.hidden) {
+            display: block;
+        }
+        .profile-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .profile-picture {
+            width: 180px;
+            height: 230px;
+            background: #d3d3d3;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .profile-picture img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         .info-box {
             background: #e0c3fc;
             padding: 15px;
             margin: 10px;
             border-radius: 8px;
-            position: relative;
         }
         .download-btn {
-            display: inline-block;
             background: #6a0dad;
             color: white;
-            padding: 10px 20px;
-            text-decoration: none;
+            padding: 10px 15px;
+            border: none;
             border-radius: 5px;
-            margin: 10px;
+            cursor: pointer;
+            margin-top: 10px;
         }
         .download-btn:hover {
             background: #8a2be2;
-        }
-        .cv-container {
-            margin: 20px 0;
-        }
-        .schedule-container {
-            margin-top: 20px;
-        }
-        .schedule-container img {
-            width: 100%;
-            max-width: 600px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
     </style>
 </body>
