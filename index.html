@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
+        img {
+        max-width: 100%; /* La imagen nunca será más ancha que su contenedor */
+        height: auto; /* Mantiene la proporción original */
+        display: block; /* Evita espacios extra alrededor de la imagen */
+        margin: 0 auto; /* Centra la imagen */
+        }
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: #f4f4f4;
@@ -294,9 +300,13 @@
             border-radius: 5px;
             cursor: pointer;
             margin-top: 10px;
+            text-align: center;
+            margin-left: 40%;
         }
         .download-btn:hover {
             background: #8a2be2;
+            text-align: center;
+            margin-left: 40%;
         }
     </style>
 </body>
